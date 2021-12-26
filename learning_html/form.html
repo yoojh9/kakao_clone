@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <title>Form Tag</title>
+</head>
+
+<body>
+    <form style="display: flex; flex-direction: column">
+        <input type="color" />
+        <div>
+            <label for="profile">Profile Photos</label>
+            <input id="profile" type="file" accept="images/*" />
+        </div>
+
+        <div>
+            <label for="first-name">First Name</label>
+            <input id="first-name" required placeholder="Name" type="text" />
+        </div>
+
+        <div>
+            <label for="website">Website</label>
+            <input id="website" placeholder="url" type="url">
+        </div>
+        <input type="range" />
+        <div>
+            <label for="date">date</label>
+            <input id="date" type="date" />
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input id="password" required placeholder="password" minlength="10" type="password" />
+        </div>
+        <input type="submit" value="Create Account" />
+    </form>
+</body>
+
+</html>

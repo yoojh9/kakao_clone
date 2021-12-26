@@ -24,6 +24,7 @@
 
 ### 2) \<body\> 
 - 사용자가 볼 수 있는 content
+- (home.html)[./home.html] 참고
 
 ```HTML
 <!DOCTYPE html>
@@ -83,6 +84,19 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 - 태그는 암기하려고 하지 말고 검색하면 됨
 
 <br><br>
+
+## 6. Form tags
+- (form.html)[./form.html] 참고
+
+### 1) \<label\>
+- \<label\> 은 \<input\> 태그와 같이 있어야 작용함
+- input 태그의 ID를 label 태그의 for 어트리뷰트 값으로 넣어주면 됨
+
+```HTML
+<label for="profile">Profile Photos</label>
+<input id="profile" type="file" accept="images/*" />
+
+```
 
 
 
