@@ -60,7 +60,7 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 - 브라우저 탭에 뜨는 아이콘 이미지
 
 ```HTML
-    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.png" <title>Home - My first
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.png"/>
 
 ``` 
 
@@ -70,5 +70,19 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 - open graph 태그 / og 태그 
 - 링크의 미리보기, 제목, 이미지를 결정하는 태그
 - 카카오톡 공유하기 시에도 확인할 수 있음
-- 카카오톡의 경우 먼저 **og:title** 태그를 찾고 \<meta property="og:title"\> -> description을 찾은 후 \<meta name="description"\> -> og:image를 본다 \<meta property="og:image"\>
+- 카카오톡의 경우 먼저 **og:title** 태그를 찾고 \<meta property="og:title"\>   
+-> description을 찾은 후 \<meta name="description"\>   
+-> og:image를 본다 \<meta property="og:image"\>
+
+<br><br>
+
+## 5. More tags
+
+- 구글에서 html 태그 검색 시 ['mdn'](https://developer.mozilla.org/ko/docs/Web/HTML/Element) 을 붙여서 검색해라
+- w3 schools 사이트는 사용하지 마라
+- 태그는 암기하려고 하지 말고 검색하면 됨
+
+<br><br>
+
+
 
