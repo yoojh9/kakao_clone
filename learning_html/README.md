@@ -24,7 +24,7 @@
 
 ### 2) \<body\> 
 - 사용자가 볼 수 있는 content
-- (home.html)[./home.html] 참고
+- [home.html](./home.html) 참고
 
 ```HTML
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 <br><br>
 
 ## 6. Form tags
-- (form.html)[./form.html] 참고
+- [form.html](./form.html) 참고
 
 ### 1) \<label\>
 - \<label\> 은 \<input\> 태그와 같이 있어야 작용함
