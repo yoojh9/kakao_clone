@@ -1,5 +1,5 @@
-
 ## 1. vsc extension
+
 - Community Material Theme
 - Material Icon Theme
 
@@ -8,8 +8,9 @@
 ## 2. Tag Attribute
 
 ### 1) \<a \/\>
+
 - target 어트리뷰트 기본값은 self
-- target=_blank를 설정하면 다른 탭에서 링크가 열림
+- target=\_blank를 설정하면 다른 탭에서 링크가 열림
 
 ```HTML
 <a href="http://google.com" target="_self>
@@ -18,11 +19,14 @@
 <br><br>
 
 ## 3. HTML Structure
-### 1) \<head\> 
- - 웹사이트의 환경을 설정함 
- - 페이지에 관한 환경 설정
 
-### 2) \<body\> 
+### 1) \<head\>
+
+- 웹사이트의 환경을 설정함
+- 페이지에 관한 환경 설정
+
+### 2) \<body\>
+
 - 사용자가 볼 수 있는 content
 - [home.html](./home.html) 참고
 
@@ -44,36 +48,41 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 <br><br>
 
 ## 4. Its All About the Head
+
 - 구글에서 검색했을 때 나오는 결과는 웹 사이트의 \<title\>과 \<meta name="description"\>의 내용을 가져옴
 
 <br>
 
 ### 1) \<meta\>
+
 - 부가적인 정보
 - 어트리뷰트로 content와 name을 가지고 있음
 
 ### 2) \<meta charset="utf-8">
+
 - 브라우저에게 텍스트를 어떻게 그려달라고 말해줌
 - 한글이나 다른 특수문자가 있는 언어를 입력할 때 브라우저가 이해할 수 있게 도와 줌.
 - 이 메타태그가 없으면 브라우저가 이해하지 못하는 언어는 깨져보이게 됨
 
 ### 3) \<link\>
+
 - 브라우저 탭에 뜨는 아이콘 이미지
 
 ```HTML
     <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.png"/>
 
-``` 
+```
 
 <br>
 
 ### 4) \<meta property="og:image"\>
-- open graph 태그 / og 태그 
+
+- open graph 태그 / og 태그
 - 링크의 미리보기, 제목, 이미지를 결정하는 태그
 - 카카오톡 공유하기 시에도 확인할 수 있음
-- 카카오톡의 경우 먼저 **og:title** 태그를 찾고 \<meta property="og:title"\>   
--> description을 찾은 후 \<meta name="description"\>   
--> og:image를 본다 \<meta property="og:image"\>
+- 카카오톡의 경우 먼저 **og:title** 태그를 찾고 \<meta property="og:title"\>  
+  -> description을 찾은 후 \<meta name="description"\>  
+  -> og:image를 본다 \<meta property="og:image"\>
 
 <br><br>
 
@@ -86,9 +95,11 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 <br><br>
 
 ## 6. Form tags
+
 - [form.html](./form.html) 참고
 
 ### 1) \<label\>
+
 - \<label\> 은 \<input\> 태그와 같이 있어야 작용함
 - input 태그의 ID를 label 태그의 for 어트리뷰트 값으로 넣어주면 됨
 
@@ -98,5 +109,51 @@ html 태그에 lang 어트리뷰트를 넣는 이유는 google,naver와 같은 �
 
 ```
 
+<br><br>
 
+## 7. Semantic HTML
 
+semantic: 문서를 보기만 해도 그 의미를 짐작할 수 있음
+
+### (1) header
+
+- body 안에 포함되어 있음
+- header는 의미가 없는 div 태그를 대체할 수 있다. div와 같은 기능을 가지지만 보기만 해도 의미를 알 수 있음
+- header라는 태그를 보기만 해도 이게 website의 header라고 알 수 있다
+- 검색엔진도 태그를 이해할 수 있다
+
+<br>
+
+### (2) main
+
+<br>
+
+### (3) footer
+
+- 꼬릿말을 위한 태그
+
+<br>
+
+예전에는 semantic 태그들이 없어서 모두 div로 개발했지만 웬만하면 의미가 있는 semantic 태그들을(header, main, footer, nav, aside) 이용하는 것이 좋다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Form Tag</title>
+    </head>
+    <body>
+        <header>
+            <h1>The Nico Times</h1>
+        </header>
+        <main>
+            <address>서울시 송파구 송파1동</address>
+            <p>hello!</p>
+        </main>
+        <footer>
+            &copy; 2020 Jeonghyun
+        </footer>
+    </body>
+</html>
+```
