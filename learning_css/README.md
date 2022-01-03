@@ -101,7 +101,7 @@ body {
 - 이 현상이 **collapsing margins** 현상이며 위, 아래쪽에서만 일어난다.
 - collapsing margins 현상은 각 영역의 경계가 서로 같을 때 일어나고, 이 때 두 영역의 margin은 하나가 되며, 위 아래에서만 일어난다.
 
-```
+```CSS
 html {
     background-color: tomato;
 }
