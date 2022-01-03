@@ -4,23 +4,59 @@
         <meta charset="utf-8" />
         <title>CSS</title>
         <style>
+            * {
+                border: 2px solid black;
+            }
             html {
                 background-color: tomato;
             }
             body {
+                padding: 20px;
                 background-color: thistle;
-                margin: 20px 15px 40px 60px;
+                margin: 20px;
             }
 
             div {
-                margin: 20px 15px;
+                padding: 20px;
+                border: 2px solid black;
+            }
+
+            #first {
+                background-color: whitesmoke;
                 height: 150px;
                 width: 150px;
-                background-color: white;
             }
+            #second {
+                background-color: teal;
+                height: 100px;
+                width: 100px;
+            }
+            #third {
+                background-color: wheat;
+                height: 50px;
+                width: 50px;
+            }
+            #fourth {
+                background-color: blanchedalmond;
+                height: 25px;
+                width: 25px;
+            }
+            span {
+                border-style: dotted;
+            }
+
         </style>
+
     </head>
     <body>
-        <div></div>
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    <div id="fourth">
+                        <span>Hello</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

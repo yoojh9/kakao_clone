@@ -73,6 +73,8 @@ body {
 }
 ```
 
+<br>
+
 ### (1) margin
 
 - box의 border(경계)의 바깥에 있는 공간
@@ -100,6 +102,7 @@ body {
 - 위 그림에서 CSS는 아래와 같다. 이때 사진처럼 div 태그에 상하로 적용된 margin이 20px이 있음에도 분홍색 body 태그와 div 태그는 상하 영역이 서로 붙어있다.
 - 이 현상이 **collapsing margins** 현상이며 위, 아래쪽에서만 일어난다.
 - collapsing margins 현상은 각 영역의 경계가 서로 같을 때 일어나고, 이 때 두 영역의 margin은 하나가 되며, 위 아래에서만 일어난다.
+- 경계가 닿아서 margin이 같아졌나보구나 생각
 
 ```CSS
 html {
@@ -116,4 +119,46 @@ div {
     width: 150px;
     background-color: white;
 }
+```
+
+<br>
+
+### (3) padding
+
+- margin과 반대되는 개념으로 box의 border(경계)의 안쪽에 있는 공간이다
+
+<br>
+
+### (4) border
+
+- border는 말 그대로 box의 경계이다.
+- border는 inline과 black 모두에 적용된다.
+- CSS는 cascading이므로 아래와 같이 코드를 작성하면, span 태그는 점선 border가 적용된다.
+
+```CSS
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS</title>
+        <style>
+            * {
+                border: 2px solid black;
+            }
+            span {
+                border-style: dotted;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    <span>Hello</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
 ```
