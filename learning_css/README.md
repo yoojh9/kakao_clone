@@ -95,7 +95,7 @@ body {
 
 ### (2) collapsing margins
 
-<img scr="./capture.png" width="250px">
+<img src="./capture.png" width="400px">
   
 - 위 그림에서 CSS는 아래와 같다. 이때 사진처럼 div 태그에 상하로 적용된 margin이 20px이 있음에도 분홍색 body 태그와 div 태그는 상하 영역이 서로 붙어있다.
 - 이 현상이 **collapsing margins** 현상이며 위, 아래쪽에서만 일어난다.
