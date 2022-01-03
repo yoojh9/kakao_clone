@@ -162,3 +162,53 @@ div {
 </html>
 
 ```
+
+<br><br>
+
+## 5) Inline
+
+- Inline에서도 border 속성이 적용된다.
+- margin과 padding도 inline에서 적용될까? 아래와 같은 코드가 있다
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Inline</title>
+        <style>
+            body {
+                margin: 20px;
+            }
+            span {
+                background-color: yellowgreen;
+                padding: 20px;
+                margin: 30px;
+            }
+        </style>
+
+    </head>
+    <body>
+       <span>Hello</span>
+       <span>Hello</span>
+    </body>
+</html>
+```
+
+<br>
+
+- 위 코드는 아래 스크린샷 화면과 같다.
+
+<img src="capture2.png" width="400px">
+
+<br>
+
+- ❗️ inline에서 padding은 4빙향 모두 적용되지만 inline은 height와 width가 없으므로 margin은 좌우로만 가질 수 있다.
+- 그러므로 위 아래 margin을 적용하고 싶다면 inline 요소들을 block으로 바꿔야 한다.
+
+<br><br>
+
+## 6) Classes
+
+- class명은 유일할 필요가 없다. 여러 요소들이 같이 쓸 수 있다
+- 한번에 여러 class를 쓸 수도 있다. 어떤 요소는 class가 하나일 수 있지만 다른 요소는 세 개를 가질 수도 있다.
