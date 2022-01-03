@@ -203,7 +203,7 @@ div {
 
 <br>
 
-- ❗️ inline에서 padding은 4빙향 모두 적용되지만 inline은 height와 width가 없으므로 margin은 좌우로만 가질 수 있다.
+- ❗️ inline에서 padding은 4방향 모두 적용되지만 inline은 height와 width가 없으므로 margin은 좌우로만 가질 수 있다.
 - 그러므로 위 아래 margin을 적용하고 싶다면 inline 요소들을 block으로 바꿔야 한다.
 
 <br><br>
