@@ -267,9 +267,7 @@ div {
 ## 8) FlexBox
 
 - 위의 inline-block의 문제를 고치기 위해 나온 방법
-
-### 자식 엘리먼트에는 어떤 것도 적지 말아야 한다. 부모 엘리먼트에만 명시해야 한다.
-
+- 자식 엘리먼트에는 어떤 것도 적지 말아야 한다. 부모 엘리먼트에만 명시해야 한다.
 - 부모 엘리먼트를 flex container로 만들어야 함
 - 아래 예제에서는 div의 부모인 body를 display:flex로 만든다.
 
@@ -316,8 +314,8 @@ div {
 
 ### (1) justify-content
 
-- **flex-start**: 요소들을 main-axis 축의 시작 위치에 정렬
-- **flex-end**: 요소들을 main-axis 상의 끝 위치로 정렬
+- **flex-start**: 요소들을 main-axis 축의 시작 위치에 정렬 (왼쪽)
+- **flex-end**: 요소들을 main-axis 상의 끝 위치로 정렬 (오른쪽)
 - **center**: 요소들을 컨테이너 가운데로 정렬
 - **space-between**: 요소들 사이에 동일한 간격을 둠
 - **space-around**: 요소들 주위에 동일한 간격을 둠
@@ -331,6 +329,8 @@ div {
 - **center**: 요소들을 컨테이너의 cross-axis 상의 가운데로 정렬
 - **baseline**: 요소들을 컨테이너의 시작 위치에 정렬
 - **stretch**: 요소들을 컨테이너에 맞도록 늘림
+
+<br>
 
 ### (3) flex-direction
 
@@ -387,6 +387,26 @@ div {
 
 <img src="./images/wrap-reverse.png" width="400px">
 
+<br><br>
+
+### (5) flex-flow
+
+- flex-direction과 flex-wrap은 자주 같이 사용되기 때문에 flex-flow가 이를 대신할 수 있다. 이 속성은 공백 문자를 이용하여 두 속성의 값들을 인자로 받는다
+- **flex-flow: row wrap** 요소들을 가로선 상의 여러줄에 걸쳐 정렬할 수 있다.
+
 <br>
+
+### (6) align-content
+
+- 여러 줄 사이의 간격을 지정할 수 있다.
+- align-items는 컨테이너 안에서 어떻게 모든 요소들이 정렬되는지를 지정하고, align-content는 여러 줄들 사이의 간격을 지정한다.
+- 한 줄만 있을 경우, align-content는 효과를 보이지 않는다.
+
+- **flex-start**: 여러 줄들을 컨테이너의 꼭대기에 정렬한다
+- **flex-end**: 여러 줄들을 컨테이너의 바닥에 정렬한다
+- **center**: 여러 줄들을 컨테이너의 세로선 상의 가운데에 정렬한다
+- **space-between**: 여러 줄들 사이에 동일한 간격을 둔다
+- **space-around**: 여러 줄들 주위에 동일한 간격을 둔다
+- **strecth**: 여러 줄들을 컨테이너에 맞도록 늘린다.
 
 - FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
