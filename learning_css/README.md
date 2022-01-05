@@ -303,7 +303,7 @@ div {
 
 - 위 div 엘리먼트들은 여전히 block이고, margin과 padding을 가질 수 있다.
 
-<br>
+<br><br>
 
 <img src="./images/flexbox.png" width="400px">
 
@@ -312,7 +312,7 @@ div {
 - **justify-content**는 main-axis에 적용된다.
 - **align-items**는 cross-axis에 적용된다.
 
-<br>
+<br><br>
 
 ### (2) flex-direction
 
@@ -320,31 +320,33 @@ div {
 - display:flex 일 때 default는 row이다
 - flex-direction이 column이면 main-axis는 수직이 되고, cross-axis가 수평이 된다.
 
-<img src="./images/flex-direction.png" height="100px">
+<img src="./images/flex-direction.png" height="300px">
 
 - flex-direction: column-reverse
 
-<img src="./images/column-reverse.png" height="100px">
+<img src="./images/column-reverse.png" height="300px">
 
 - flex-direction: row-reverse
 
 <img src="./images/row-reverse.png" width="400px">
 
-<br>
+<br><br>
 
 ### (3) flex-wrap
 
-아래 스크린샷은 default 값인 flex-wrap:nowrap 일 때 발생한다.
+- **flex-wrap:nowrap** 일 때 발생한다. (default)
+- flexbox는 기본적으로 width를 초기 사이즈로만 여기고, 모든 엘리먼트들을 같은 줄에 있게 하기 위해 width를 바꿀 수도 있다.
 
 <img src="./images/nowrap.png" width="400px">
 
-- flexbox는 기본적으로 width를 초기 사이즈로만 여기고, 모든 엘리먼트들을 같은 줄에 있게 하기 위해 width를 바꿀 수도 있다.
+<br>
 
 - **flex-wrap: wrap;** 으로 설정하면 명시된 사이즈인 300px를 반영한다
+- wrap으로 설정하면 한 줄에 들어가는 만큼 최대한 집어넣고 그게 되지 않으면 다음 줄로 옮긴다.
 
 <img src="./images/wrap.png" width="400px">
 
-- wrap으로 설정하면 한 줄에 들어가는 만큼 최대한 집어넣고 그게 되지 않으면 다음 줄로 옮긴다.
+<br>
 
 - **flex-wrap: wrap-reverse**를 설정하면 위 사진과는 정반대의 현상이 발생한다
 
