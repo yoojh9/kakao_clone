@@ -264,11 +264,11 @@ div {
 
 <br><br>
 
-## 8) Flex
+## 8) FlexBox
 
 - 위의 inline-block의 문제를 고치기 위해 나온 방법
 
-### [FlexBox 규칙 1] 자식 엘리먼트에는 어떤 것도 적지 말아야 한다. 부모 엘리먼트에만 명시해야 한다.
+### (1) 자식 엘리먼트에는 어떤 것도 적지 말아야 한다. 부모 엘리먼트에만 명시해야 한다.
 
 - 부모 엘리먼트를 flex container로 만들어야 함
 - 아래 예제에서는 div의 부모인 body를 display:flex로 만든다.
@@ -307,7 +307,45 @@ div {
 
 <img src="./images/flexbox.png" width="400px">
 
-- 위 그림과 같이 flexbox에는 main-axis(주축)이 있고 cross-axis(교차축)이 있다,.
+- 위 그림과 같이 flexbox에는 main-axis(주축)이 있고 cross-axis(교차축)이 있다.
 - main-axis는 수평으로 default가 설정되어 있고, cross-axis는 수직으로 default가 설정되어 있다.
 - **justify-content**는 main-axis에 적용된다.
 - **align-items**는 cross-axis에 적용된다.
+
+<br>
+
+### (2) flex-direction
+
+- main-axis와 cross-axis의 방향을 바꿀 수 있다.
+- display:flex 일 때 default는 row이다
+- flex-direction이 column이면 main-axis는 수직이 되고, cross-axis가 수평이 된다.
+
+<img src="./images/flex-direction.png" height="100px">
+
+- flex-direction: column-reverse
+
+<img src="./images/column-reverse.png" height="100px">
+
+- flex-direction: row-reverse
+
+<img src="./images/row-reverse.png" width="400px">
+
+<br>
+
+### (3) flex-wrap
+
+아래 스크린샷은 default 값인 flex-wrap:nowrap 일 때 발생한다.
+
+<img src="./images/nowrap.png" width="400px">
+
+- flexbox는 기본적으로 width를 초기 사이즈로만 여기고, 모든 엘리먼트들을 같은 줄에 있게 하기 위해 width를 바꿀 수도 있다.
+
+- **flex-wrap: wrap;** 으로 설정하면 명시된 사이즈인 300px를 반영한다
+
+<img src="./images/wrap.png" width="400px">
+
+- wrap으로 설정하면 한 줄에 들어가는 만큼 최대한 집어넣고 그게 되지 않으면 다음 줄로 옮긴다.
+
+- **flex-wrap: wrap-reverse**를 설정하면 위 사진과는 정반대의 현상이 발생한다
+
+<img src="./images/wrap-reverse.png" width="400px">
