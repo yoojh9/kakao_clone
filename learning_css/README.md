@@ -318,15 +318,19 @@ div {
 
 - main-axis와 cross-axis의 방향을 바꿀 수 있다.
 - display:flex 일 때 default는 row이다
-- flex-direction이 column이면 main-axis는 수직이 되고, cross-axis가 수평이 된다.
+- **flex-direction:column**이면 main-axis는 수직이 되고, cross-axis가 수평이 된다.
 
-<img src="./images/flex-direction.png" height="300px">
+<img src="./images/flex-direction.png" height="500px">
 
-- flex-direction: column-reverse
+<br>
 
-<img src="./images/column-reverse.png" height="300px">
+- **flex-direction: column-reverse**
 
-- flex-direction: row-reverse
+<img src="./images/column-reverse.png" height="500px">
+
+<br>
+
+- **flex-direction: row-reverse**
 
 <img src="./images/row-reverse.png" width="400px">
 
