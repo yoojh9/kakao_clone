@@ -97,7 +97,7 @@ body {
 
 ### (2) collapsing margins
 
-<img src="./capture.png" width="400px">
+<img src="./images/capture.png" width="400px">
   
 - 위 그림에서 CSS는 아래와 같다. 이때 사진처럼 div 태그에 상하로 적용된 margin이 20px이 있음에도 분홍색 body 태그와 div 태그는 상하 영역이 서로 붙어있다.
 - 이 현상이 **collapsing margins** 현상이며 위, 아래쪽에서만 일어난다.
@@ -199,7 +199,7 @@ div {
 
 - 위 코드는 아래 스크린샷 화면과 같다.
 
-<img src="capture2.png" width="400px">
+<img src="./images/capture2.png" width="400px">
 
 <br>
 
@@ -212,3 +212,102 @@ div {
 
 - class명은 유일할 필요가 없다. 여러 요소들이 같이 쓸 수 있다
 - 한번에 여러 class를 쓸 수도 있다. 어떤 요소는 class가 하나일 수 있지만 다른 요소는 세 개를 가질 수도 있다.
+
+<br><br>
+
+## 7) display: inline-block
+
+- 아래 코드와 같이 div box 속성에 display: inline을 주면 inline은 너비와 높이를 가질 수 없으므로 화면에 보이지 않는다.
+- 이럴 때는 **inline-block**을 이용한다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Inline</title>
+        <style>
+            body {
+                margin: 20px;
+            }
+            div {
+                display: inline;
+                width: 50px;
+                height: 50px;
+                background-color: teal;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </body>
+</html>
+```
+
+<br>
+
+- inline-block은 block으로 인식하게 하고, height도 가질 수 있고 사방에 margin도 가질 수 있다. 또한 block과는 달리 바로 옆에 다른 요소가 올 수도 있다.
+
+<br>
+
+<img src="./images/capture3.png" width="400px">
+
+<br>
+
+- 하지만 inline-block은 사용하기에 별로고 많은 문제가 있다.
+- 위 스크린샷처럼 뭔지는 몰라도 사이에 빈 공간이 있고, 예상치 못한 이 점이 제어하기 어렵다
+- inline-block은 Resposive Design(반응형 디자인)을 지원하지 않는다.
+
+<br><br>
+
+## 8) Flex
+
+- 위의 inline-block의 문제를 고치기 위해 나온 방법
+
+### [FlexBox 규칙 1] 자식 엘리먼트에는 어떤 것도 적지 말아야 한다. 부모 엘리먼트에만 명시해야 한다.
+
+- 부모 엘리먼트를 flex container로 만들어야 함
+- 아래 예제에서는 div의 부모인 body를 display:flex로 만든다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Inline</title>
+        <style>
+            body {
+                margin: 20px;
+                display: flex;
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: teal;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </body>
+</html>
+```
+
+- 위 div 엘리먼트들은 여전히 block이고, margin과 padding을 가질 수 있다.
+
+<br>
+
+<img src="./images/flexbox.png" width="400px">
+
+- 위 그림과 같이 flexbox에는 main-axis(주축)이 있고 cross-axis(교차축)이 있다,.
+- main-axis는 수평으로 default가 설정되어 있고, cross-axis는 수직으로 default가 설정되어 있다.
+- **justify-content**는 main-axis에 적용된다.
+- **align-items**는 cross-axis에 적용된다.
