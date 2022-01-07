@@ -458,16 +458,18 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 </html>
 ```
 
+<br>
+
 - 위 코드는 wheat 컬러 div 위에 teal 컬러 div가 있고, wheat 컬러 div는 스크롤을 해도 위치가 고정됨.
 
-<img src="./images/position_fixed.png" width="400px">
+<img src="./images/position_fixed.png" width="300px">
 
 <br>
 
 - top, left, right, bottom 프로퍼티 중에 하나만 수정해도 wheat 컬러 div의 위치는 변경되고, div 끼리 서로 겹쳐질 수도 있음.
 - 아래 사진은 #different div에 top:5px 값을 준 것이다.
 
-<img src="./images/top.png" width="400px">
+<img src="./images/top.png" width="300px">
 
 <br>
 
@@ -509,4 +511,4 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 
 <br>
 
-<img src="./images/position_fixed2.png" width="400px">
+<img src="./images/position_fixed2.png" width="300px">
