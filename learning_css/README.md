@@ -409,4 +409,104 @@ div {
 - **space-around**: 여러 줄들 주위에 동일한 간격을 둔다
 - **strecth**: 여러 줄들을 컨테이너에 맞도록 늘린다.
 
-- FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
+<br>
+
+FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
+
+<br><br><br>
+
+## 9) Position
+
+- position은 레이아웃보다는 위치를 아주 조금 위로, 아주 조금 오른쪽으로 옮기고 싶을 떄 사용한다.
+
+### (1) Fixed
+
+- 위치를 고정시켜 줌
+- 스크롤을 해도 그 위치에 있음
+- fixed를 사용하면 레이어를 부수고 다른 레이어에 위치하게 된다. 모든 것의 위에 있게 된다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Position</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 10px
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                color: white;
+                background-color: teal;
+            }
+
+            #different {
+                position: fixed;
+                background-color: wheat;
+                width: 350px;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div></div>
+       <div id="different"></div>
+    </body>
+</html>
+```
+
+- 위 코드는 wheat 컬러 div 위에 teal 컬러 div가 있고, wheat 컬러 div는 스크롤을 해도 위치가 고정됨.
+
+<img src="./images/position_fixed.png" width="400px">
+
+<br>
+
+- top, left, right, bottom 프로퍼티 중에 하나만 수정해도 wheat 컬러 div의 위치는 변경되고, div 끼리 서로 겹쳐질 수도 있음.
+- 아래 사진은 #different div에 top:5px 값을 준 것이다.
+
+<img src="./images/top.png" width="400px">
+
+<br>
+
+- 반대로 위의 div 속성에 postion:fixed를 주게 되면 아래 div와 함께 겹쳐지게 된다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Position</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 10px
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                color: white;
+            }
+            #green {
+               background-color: teal;
+               position: fixed;
+               opacity: 0.2;
+            }
+            #different {
+                background-color: wheat;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div id="green"></div>
+       <div id="different"></div>
+    </body>
+</html>
+```
+
+<br>
+
+<img src="./images/position_fixed2.png" width="400px">
