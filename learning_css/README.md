@@ -703,3 +703,69 @@ span:nth-child(3n){
     background-color: moccasin;
 }
 ```
+
+<br><br>
+
+## 11) Combinators
+
+### (1) children selector
+
+- \<p\>태그 안의 \<span\> 태그의 스타일을 변경하고 싶다면 p span {} 과 같이 작성한다.
+
+```html
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pseudo Selectors</title>
+    <style>
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+      span {
+        color: tomato;
+      }
+      p span {
+        color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>hello</span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sed
+        veniam eos. Modi debitis officia dolore adipisci rerum placeat
+        distinctio.
+        <span>inside</span>
+      </p>
+    </div>
+  </body>
+</html>
+```
+
+<br>
+
+- 위 코드에서 p 태그 안의 span을 제외하고, 만약 div 바로 밑 자식(direct children)에서 span을 찾아서 해당 자식만 스타일을 변경하고 싶다면, 단순히 'div span' 으로 작성하면 안된다. 이렇게 하면 span 둘다 스타일이 적용된다.
+- ** div > span ** 으로 스타일을 지정해야 div 바로 밑의 자식 span만 적용된다.
+
+```CSS
+div > span {
+    text-decoration: underline;
+}
+```
+
+<br>
+
+- 만약 p 형제인 span에 text-decoration:underline을 적용하고 싶다면
+
+```CSS
+p + span {
+    text-decoration: underline;
+}
+```
+
+<br>
+
+- '>'를 이용하여 바로 밑의 자식을 찾고 '+'를 사용해서 형제 태그를 찾을 수 있다.
