@@ -419,7 +419,16 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 
 - position은 레이아웃보다는 위치를 아주 조금 위로, 아주 조금 오른쪽으로 옮기고 싶을 떄 사용한다.
 
-### (1) Fixed
+<br>
+
+### (1) Static
+
+- default로 적용 됨
+- 레이아웃이 박스를 처음 위치하는 곳에 두는 것을 말함
+
+<br><br>
+
+### (2) Fixed
 
 - 위치를 고정시켜 줌
 - 스크롤을 해도 그 위치에 있음
@@ -512,3 +521,154 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 <br>
 
 <img src="./images/position_fixed2.png" width="300px">
+
+<br><br>
+
+### (3) Relative
+
+- 가끔 유용할 때가 있는데, 조금씩만 오른쪽 또는 왼쪽으로 옮기고 싶을 때 사용
+- position을 relative로 하면 top, bottom, left, right 속성을 사용할 수 있다.
+- element가 처음 위치한 곳을 기준으로 위치를 변경함
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Position</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 50px
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: wheat;
+            }
+            .green {
+                position: relative;
+                background-color: teal;
+                height: 100px;
+                width: 100px;
+                top: -10px;
+                left: -10px;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div>
+           <div class="green"></div>
+       </div>
+    </body>
+</html>
+```
+
+<br>
+
+- 위 코드는 아래 캡처와 같다.
+
+<img src="./images/position_relative.png" width="300px">
+
+<br><br>
+
+### (4) Absolute
+
+- position: absolute도 top, left, bottom, right을 쓰고 싶을 때 사용할 수 있는데 좀 특이한 점이 있다.
+- position: absolute는 가장 가까운 relative 부모를 기준으로 이동시켜준다.
+
+<br>
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Position</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 50px
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: wheat;
+            }
+            .green {
+                position: absolute;
+                background-color: teal;
+                height: 100px;
+                width: 100px;
+                top: 10px;
+                left: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div>
+           <div class="green"></div>
+       </div>
+    </body>
+</html>
+```
+
+<br>
+
+- 위 코드의 캡처 화면은 아래와 같다.
+
+<img src="./images/position-absolute.png" width="300px">
+
+- green div의 부모 div는 relative가 아니라 static이다.
+- body는 바깥 쪽에 있는 가장 relative한 부모가 될 수 있다.
+- absolute는 부모 박스 기준이 아니라 body를 기준으로 위치가 변경된다
+- 때문에 right: 0px을 주면 body의 맨 오른쪽으로 이동하게 된다.
+
+<br><br>
+
+- body를 기준으로 움직이고 싶지 않다면 부모 div에 position: relative를 준다.
+- absolute는 가장 가까운 relative 부모 기준으로 위치를 변경한다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Position</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 50px
+            }
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: wheat;
+                position: relative;
+            }
+            .green {
+                position: absolute;
+                background-color: teal;
+                height: 100px;
+                width: 100px;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div>
+           <div class="green"></div>
+       </div>
+    </body>
+</html>
+```
+
+<br>
+
+- 위 코드는 아래 캡처와 같다.
+
+<img src="./images/position_absolute2.png" width="300px">
