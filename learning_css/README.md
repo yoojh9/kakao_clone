@@ -672,3 +672,34 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 - 위 코드는 아래 캡처와 같다.
 
 <img src="./images/position_absolute2.png" width="300px">
+
+<br><br><br>
+
+## 10) Pseudo Selectors
+
+- 더 세부적으로 엘리먼트를 선택해주는 것
+
+```CSS
+div:first-child {
+    background-color: tomato;
+}
+div:last-child {
+    background-color: teal;
+}
+```
+
+- 이렇게 하는게 클래스나 아이디로 지정하는 것보다 더 좋은 방법
+
+<br>
+
+```CSS
+span {
+    background-color: tomato;
+}
+span:nth-child(even){
+    background-color: teal;
+}
+span:nth-child(3n){
+    background-color: moccasin;
+}
+```
