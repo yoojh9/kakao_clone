@@ -792,6 +792,14 @@ p ~ span {
 
 - 더 많은 pseudo class: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 
+<br>
+
+```CSS
+input:required {
+    border-color: tomato;
+}
+```
+
 <br><br>
 
 ## 11) Attribute Selector
@@ -809,5 +817,26 @@ input[placeholder="username"]{
 }
 input[placeholder~="name"]{
     background-color: pink;
+}
+```
+
+<br><br>
+
+## 12) States
+
+- active: 마우스로 버튼을 누르고 있을 때
+- hover: 마우스가 대상 위에 있을 때
+- focus: 키보드로 선택 되었을 때를 말함
+- visited: 링크에만 적용 됨. 링크를 방문하면 스타일이 변함
+- focus-within: focused인 자식을 가진 부모 엘리먼트에 적용됨
+
+<br>
+
+- state 속성은 다른 태그와 연계해서 쓸 수도 있음
+- 아래 예제는 부모 form이 hover인 상태에서 자식 input 태그의 background-color를 바꿀 수 있음
+
+```CSS
+form:hover input{
+    background-color: steelblue;
 }
 ```

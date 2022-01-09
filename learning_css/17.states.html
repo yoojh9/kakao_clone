@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>States</title>
+        <style>
+            body {
+                height: 1000vh;
+                margin: 50px
+            }
+            span {
+                background-color: yellowgreen;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            
+            button:hover {
+                background-color: tomato;
+            }
+            input:focus {
+                background-color: tomato;
+            }
+            a:visited {
+                color: tomato;
+            }
+            a:hover{
+                color: teal;
+            }
+            a:focus{
+                color:turquoise;
+            }
+            form {
+                padding: 20px;
+                border: 1px solid skyblue;
+                display: flex;
+                flex-direction: column;
+            }
+            form:focus-within{
+                border-color: seagreen;
+            }
+            form:hover input{
+                background-color: steelblue;
+            }
+        </style>
+
+    </head>
+    <body>
+       <div>
+            <button>Hello</button>
+            <form>
+                <input type="text"/>
+                <input type="text"/>
+                <a href="https://apple.com">go to apple</a>
+            </form>
+       </div>
+    </body>
+</html>
