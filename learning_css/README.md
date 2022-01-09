@@ -704,9 +704,7 @@ span:nth-child(3n){
 }
 ```
 
-<br><br>
-
-## 11) Combinators
+<br>
 
 ### (1) children selector
 
@@ -756,9 +754,12 @@ div > span {
 }
 ```
 
-<br>
+<br><br>
+
+### (2) sibling selector
 
 - 만약 p 형제인 span에 text-decoration:underline을 적용하고 싶다면
+- '+'를 사용하게 되면 p 태그 바로 다음에 오는 형제 태그에만 스타일이 적용된다.
 
 ```CSS
 p + span {
@@ -768,4 +769,45 @@ p + span {
 
 <br>
 
-- '>'를 이용하여 바로 밑의 자식을 찾고 '+'를 사용해서 형제 태그를 찾을 수 있다.
+- 만약 span이 p 태그의 형제인데 바로 뒤에 오지 않을 때 쓸 수 있는게 바로 '~'이다.
+
+```CSS
+p ~ span {
+    text-decoration: underline;
+}
+```
+
+<br>
+
+### (3) 결론
+
+- p span: 부모 자식 관계
+- p > span: 부모 바로 밑의 자식 관계
+- p + span: 형제와 바로 뒤에 오는 형제의 관계
+- p ~ span: 형제와 형제 관계. 꼭 바로 뒤에 올 필요는 없음
+
+<br>
+
+### (4) Pseudo Classes
+
+- 더 많은 pseudo class: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+<br><br>
+
+## 11) Attribute Selector
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+<br>
+
+```CSS
+input[type="password"]{
+    background-color: thistle;
+}
+input[placeholder="username"]{
+    border-color: blue;
+}
+input[placeholder~="name"]{
+    background-color: pink;
+}
+```
