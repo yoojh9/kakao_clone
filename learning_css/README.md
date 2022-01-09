@@ -619,7 +619,7 @@ FlexBox 유용한 사이트: https://flexboxfroggy.com/#ko
 
 - 위 코드의 캡처 화면은 아래와 같다.
 
-<img src="./images/position-absolute.png" width="300px">
+<img src="./images/position_absolute.png" width="300px">
 
 - green div의 부모 div는 relative가 아니라 static이다.
 - body는 바깥 쪽에 있는 가장 relative한 부모가 될 수 있다.
