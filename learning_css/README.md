@@ -983,3 +983,72 @@ ease-in-function을 확인할 수 있는 사이트: https://matthewlein.com/tool
 ```CSS
 transition: all 1s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 ```
+
+<br><br>
+
+## 2) Transformation
+
+말 그대로 한 요소를 변화시킬 수 있다.  
+Transformation은 지정한 요소 말고 다른 요소는 변화시키지 않는다.
+
+아래 예제에서는 span태그를 제외하고 img만 X축 기준으로 100px 이동함. span 입장에서 보면 span은 img가 원래 그 자리에 있다고 생각한다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Transformation</title>
+        <style>
+             img {
+                 border: 5px solid black;
+                 border-radius: 50%;
+                 transform: translateX(100px);
+             }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+        <span>hahahahahaha</span>
+    </body>
+</html>
+```
+
+<br>
+
+- transformation은 box 엘리먼트를 변화시키지 않는다. 또한 일종의 3D transformation이기 때문에 margin, padding이 적용되지 않는다.
+
+- transformation은 페이지의 픽셀의 다른 부분에서 일어난다. transformation은 box 차원에서 일어나지 않는다.
+
+- transformation은 transition처럼 여러개를 조합할 수 있다.
+- transform과 transition을 같이 사용하면 transformation에 애니메이션을 줄 수 있다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Transformation</title>
+        <style>
+             img {
+                 border: 5px solid black;
+                 border-radius: 50%;
+                 transition: transform 2s ease-in-out;
+             }
+             img:hover {
+                 transform: rotateZ(360deg) scale(0.5);
+             }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+        <span>hahahahahaha</span>
+    </body>
+</html>
+```
+
+<br>
+
+- mdn 문서: https://developer.mozilla.org/ko/docs/Web/CSS/transform
