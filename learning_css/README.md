@@ -1134,3 +1134,24 @@ Transformation은 지정한 요소 말고 다른 요소는 변화시키지 않�
 <br><br>
 
 ## 4) Media Queries
+
+Media Query는 오직 CSS만을 이용해서 스크린의 사이즈를 알 수 있는 방법이다.
+
+```CSS
+@media screen and (max-width: 650px) {
+    div {
+        background-color: mediumpurple;
+    }
+}
+```
+
+<br>
+
+### (1) orientation
+
+- landscape
+- portrait
+
+<br>
+
+- Media Query MDN : https://developer.mozilla.org/ko/docs/Web/CSS/Media_Queries/Using_media_queries
