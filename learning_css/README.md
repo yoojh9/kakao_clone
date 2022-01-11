@@ -824,7 +824,7 @@ input[placeholder~="name"]{
 
 ## 12) States
 
-- active: 마우스로 버튼을 누르고 있을 때
+- active: 마우스로 클릭하고 있을 때
 - hover: 마우스가 대상 위에 있을 때
 - focus: 키보드로 선택 되었을 때를 말함
 - visited: 링크에만 적용 됨. 링크를 방문하면 스타일이 변함
@@ -838,5 +838,87 @@ input[placeholder~="name"]{
 ```CSS
 form:hover input{
     background-color: steelblue;
+}
+```
+
+<br><br>
+
+## 13) Pseudo element
+
+- ::이 2개인 게 특징
+
+### 1) ::placeholder
+
+- placeholder를 꾸밀 수 있게 해줌
+
+```CSS
+input::placeholder{
+    color: steelblue
+}
+```
+
+<br>
+
+### 2) ::selection
+
+- select 하게 되면 속성이 변함
+- text 밑줄 치는 것과 같은 효과를 만들 수도 있음
+
+```CSS
+p::selection {
+    background-color: yellowgreen;
+}
+```
+
+<br>
+
+### 3) ::first-letter
+
+- 첫번째 문자만 스타일을 입힐 수 있음
+
+```CSS
+p::first-letter {
+    font-size: 24px;
+}
+```
+
+<br><br>
+
+## 13) Colors and Variables
+
+- CSS에 변수를 설정할 수도 있다.
+- 변수는 dash 2개 다음에 그리고 변수 이름의 형식으로 지어야 한다. 빈 공간이 있다면 dash(-)로 채워줘야 함
+
+```CSS
+:root{
+    --main-color: #fcce00;
+}
+p {
+    background-color: var(--main-color);
+}
+a {
+    color: var(--main-color);
+}
+```
+
+<br>
+
+- 물론 color만 저장할 수 있는 것은 아니다
+
+```CSS
+:root{
+    --main-color: #fcce00;
+    --default-border: 1px solid var(--main-color)
+}
+body {
+    height: 1000vh;
+    margin: 50px
+}
+p {
+    background-color: var(--main-color);
+}
+a {
+    color: var(--main-color);
+    border: var(--default-border)
 }
 ```
