@@ -1130,3 +1130,7 @@ Transformation은 지정한 요소 말고 다른 요소는 변화시키지 않�
 
 - 만약 애니메이션이 0%와 100% 상태일때만 필요하다면 그때는 from - to를 사용하면 된다.
 - animation sample site: https://animista.net/
+
+<br><br>
+
+## 4) Media Queries
