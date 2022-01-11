@@ -1052,3 +1052,81 @@ Transformation은 지정한 요소 말고 다른 요소는 변화시키지 않�
 <br>
 
 - mdn 문서: https://developer.mozilla.org/ko/docs/Web/CSS/transform
+
+<br><br>
+
+## 3) Animation
+
+마우스를 위에 올리거나, transition이 없이 애니메이션을 만들거나 재생시킬 수 있다.
+
+- @keyframes을 붙이고 뒤에 애니메이션 이름을 쓰고, from에서 to를 지정해준다.
+- animation을 지정할 때는 animation의 이름을 사용하고, 이때 infinite를 붙여주면 무한 반복하게 된다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Animation</title>
+        <style>
+            @keyframes superSexyCoinFlip {
+                from {
+                    transform: rotateZ(0deg);
+                } to {
+                    transform: rotateZ(360deg);
+                }
+            }
+             img {
+                 border: 5px solid black;
+                 border-radius: 50%;
+                 animation: superSexyCoinFlip 5s ease-in-out infinite;
+             }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+    </body>
+</html>
+```
+
+<br>
+
+- 위에서 지정한 애니메이션은 실행하면 약간 이상해 보이는데 이유는 translateX(100px)만큼 이동 후 애니메이션이 끝나면 제자리로 다시 점프하기 때문이다.
+- 되돌리기도 애니메이션으로 만들 수 있다.
+
+```HTML
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Animation</title>
+        <style>
+            @keyframes superSexyCoinFlip {
+                0% {
+                    transform: rotateZ(0deg);
+                } 50% {
+                    transform: rotateZ(360deg) translateY(-100px);
+                }
+                100% {
+                    transform: rotateZ(0deg) translateY(0px);
+                }
+            }
+            img {
+                border: 5px solid black;
+                border-radius: 50%;
+                animation: superSexyCoinFlip 5s ease-in-out infinite;
+            }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+    </body>
+</html>
+```
+
+<br>
+
+- 만약 애니메이션이 0%와 100% 상태일때만 필요하다면 그때는 from - to를 사용하면 된다.
+- animation sample site: https://animista.net/

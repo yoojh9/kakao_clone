@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Animation</title>
+        <style>
+            @keyframes superSexyCoinFlip {
+                from {
+                    transform: rotateZ(0deg);
+                } to {
+                    transform: rotateZ(360deg) translateX(100px);
+                }
+            }
+             img {
+                 border: 5px solid black;
+                 border-radius: 50%;
+                 animation: superSexyCoinFlip 5s ease-in-out infinite;
+             }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+    </body>
+</html>

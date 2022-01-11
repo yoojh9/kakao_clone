@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr" >
+    <head>
+        <meta charset="utf-8" />
+        <title>Animation</title>
+        <style>
+            body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;;
+            }
+            @keyframes superSexyCoinFlip {
+                0% {
+                    transform: rotateZ(0deg);
+                } 
+                25% {
+                    transform: scale(2);
+                    border-radius: 0px;
+                }
+                50% {
+                    transform: rotateZ(360deg) translateY(-100px);
+                    border-color: tomato;
+                }
+                75% {
+                    border-radius: 20px;
+                    opacity: 0;
+                }
+                100% {
+                    transform: rotateZ(0deg) translateY(0px);
+                }
+            }
+            img {
+                border: 5px solid black;
+                border-radius: 50%;
+                animation: superSexyCoinFlip 5s ease-in-out infinite;
+            }
+        </style>
+
+    </head>
+    <body>
+        <img src="images/cat.png">
+    </body>
+</html>
