@@ -929,3 +929,57 @@ a {
 ---
 
 # ADVANCED CSS
+
+## 1) Transition
+
+- Transition은 어떤 상태에서 다른 상태로의 변화를 애니메이션으로 만드는 방법이다.
+- transition이라는 속성은 state가 없는 요소에 붙어야 한다. 예를 들어 아래의 예제에서 transition은 a:hover에 붙이는 것이 아니라 a 스타일 속성에 붙여야 한다.
+
+```CSS
+a {
+    color:wheat;
+    background-color: tomato;
+    text-decoration: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 55px;
+}
+a:hover {
+    color: tomato;
+    background-color: wheat;
+    font-size: 55px;
+}
+```
+
+<br>
+
+- transition에는 첫번째로 어떤 것을 변화시킬지 적어야 한다. 이 다음에는 얼마동안 변화가 일어나야 하는지 쓴다.
+- transition은 hover에서 background-color와 color를 변경했기 떄문에 적용된다. transition이 hover에 있는 background-color와 color를 찾고, 해당 속성 값이 hover 일 때 변화하면 그 변화를 애니메이션으로 만든다.
+- 변화하는 모든 것에 transition을 적용시키고 싶으면 transition: all 5s ease-in-out; 처럼 작성한다.
+
+```CSS
+transition: background-color 10s ease-in-out,
+            color 5s ease-in-out;
+```
+
+<br>
+
+### (1) ease-in-function
+
+기본적으로 브라우저에게 애니메이션이 어떻게 변하는지 알려준다.  
+ease-in-function을 확인할 수 있는 사이트: https://matthewlein.com/tools/ceaser
+
+- **linear**: 직선으로 움직이게 해 줌. 같은 속도로 직선으로 움직임
+- **ease-in**: 시작점보다 빨라지면서 움직임
+- **ease-out**: 끝에서는 느려짐
+- **ease-in-out**: 처음에는 느리게 시작했다가 가속하고 느려지면서 끝남
+
+<br>
+
+### (2) cubic-bezier
+
+또 하나의 property로 custom 애니메이션을 만들 수 있게 해 줌
+
+```CSS
+transition: all 1s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+```
