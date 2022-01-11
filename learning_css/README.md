@@ -904,6 +904,7 @@ a {
 <br>
 
 - 물론 color만 저장할 수 있는 것은 아니다
+- 하지만 explorer에서는 지원되지 않음
 
 ```CSS
 :root{
@@ -922,3 +923,9 @@ a {
     border: var(--default-border)
 }
 ```
+
+<br><br><br>
+
+---
+
+# ADVANCED CSS
