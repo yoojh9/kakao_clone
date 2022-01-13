@@ -94,3 +94,15 @@ FontAwesome에서 icon을 더 큰 사이즈로 사용하고 싶다면, 먼저 �
 }
 
 ```
+
+<br><br>
+
+## 6) Reset CSS
+
+- 대부분의 태그에 margin:0, padding:0, border:0 등을 가진 css 파일을 말함
+- https://meyerweb.com/eric/tools/css/reset/
+- reset.css파일을 만들고 styles.css파일 상단에서 import 시킨다
+
+```CSS
+@import "reset.css";
+```
