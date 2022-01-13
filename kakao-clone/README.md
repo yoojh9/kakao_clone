@@ -112,3 +112,15 @@ FontAwesome에서 icon을 더 큰 사이즈로 사용하고 싶다면, 먼저 �
 ## 7) variables.css
 
 - variables.css를 만들고 styles.css에서 import 한다.
+
+<br><Br>
+
+## 8) :not()
+
+- 스타일을 적용시키고 싶지 않을 경우 사용
+
+```CSS
+body :not(p){
+
+}
+```
