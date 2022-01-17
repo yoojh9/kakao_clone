@@ -124,3 +124,52 @@ body :not(p){
 
 }
 ```
+
+<br><br>
+
+## 9) navigation
+
+아래와 같은 형식으로 navigation을 만드는 것이 좋다.
+검색엔진 구글도 navigation을 찾아서 ul의 li 태그 안에 있는 link를 가져오게끔 설정되어 있다.
+
+```HTML
+<nav>
+  <ul>
+    <li>
+      <a href="#">
+    </li>
+  </ul>
+</nav>
+```
+
+<br>
+
+vscode 단축키로 아래와 같이 작성하면 nav 태그 내 ul 태그 아래에 a 태그를 가지고 있는 li 태그 4개를 생성해준다.
+
+```
+nav>ul>li*4>a
+```
+
+<br><br>
+
+## 10) css 순서
+
+css import 하는 순서가 중요하다.
+styles.css에서 첫줄에는 폰트를 import 했고, 그 다음 모든 style을 reset 한 후, variables.css파일을 import 했다.
+
+```CSS
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "reset.css";
+@import "variables.css";
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+/* Screens */
+@import "screens/login.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+```
