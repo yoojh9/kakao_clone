@@ -180,6 +180,8 @@ body {
 
 CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으면 너비와 높이에 더해서 화면에 그린다. 따라서 크기를 설정할 때 원하는 크기를 얻으려면 테두리나 안쪽 여백을 고려해야 한다.
 
+<br>
+
 **box-sizing** 속성을 사용해 이 방식을 바꿀 수 있다.
 
 - **content-box**는 box-sizing의 기본값으로 요소의 너비를 100픽셀로 설정하면 콘텐츠 영역이 100픽셀의 너비를 가지고, 테두리와 안쪽 여백은 이 값에 추가된다
@@ -189,4 +191,6 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 
 <img src="screenshots/capture.png" width="400px">
 
-현재 우리가 만든 navigation도 내부에 지정된 padding 값으로 인해 ellipsis 아이콘이 보이지 않는다. 이때 box-sizing 값으로 border-box를 주게 되면 보이지 않던 ellipsis 아이콘이 보여지게 된다.
+현재 우리가 만든 navigation도 내부에 지정된 padding 값으로 인해 ellipsis 아이콘이 보이지 않는다.
+
+이때 box-sizing 값으로 border-box를 주게 되면 보이지 않던 ellipsis 아이콘이 보여지게 된다.
