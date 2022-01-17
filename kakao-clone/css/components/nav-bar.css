@@ -17,17 +17,17 @@
 }
 .nav__notification {
   background-color: tomato;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
+  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: 600;
   position: absolute;
-  left: 20px;
-  bottom: 18px;
+  left: 15px;
+  bottom: 13px;
 }
 .nav__new {
   background-color: red;
@@ -36,5 +36,6 @@
   display: block;
   border-radius: 50%;
   position: absolute;
+  top: -2px;
   right: -5px;
 }
