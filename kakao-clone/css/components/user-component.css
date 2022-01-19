@@ -1,6 +1,7 @@
 .user-component {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .user-component__column:first-child {
