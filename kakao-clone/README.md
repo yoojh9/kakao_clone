@@ -194,3 +194,17 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 현재 우리가 만든 navigation도 내부에 지정된 padding 값으로 인해 ellipsis 아이콘이 보이지 않는다.
 
 이때 box-sizing 값으로 border-box를 주게 되면 보이지 않던 ellipsis 아이콘이 보여지게 된다.
+
+<br><br>
+
+## 12) span
+
+- span은 inline이므로 margin이 적용되지 않는다. margin을 적용시키기 위해서는 display: block으로 변경한다.
+
+```CSS
+.recommended-friends span {
+  display: block;
+  margin: 110px 0;
+  text-align: center;
+}
+```
