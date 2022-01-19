@@ -208,3 +208,13 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
   text-align: center;
 }
 ```
+
+<br><br>
+
+## 13) z-index
+
+- div가 있는 위치가 맨 앞에서부터 몇 번째인지를 나타냄
+- 즉 layer의 순서가 몇 번째인지 나타냄
+- layer는 포토샵이나 스케치의 레이어를 생각하면 됨
+- display 작업을 하거나 position 작업을 하면 layer를 갖게 된다.
+- z-index는 absolute position이나 fixed-position에 대해 설정할 수 있다.
