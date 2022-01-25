@@ -244,3 +244,47 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
   order: 1;
 }
 ```
+
+<br><br>
+
+## 15. Splash Screen Animation
+
+메인 화면인 friends.html에 들어가면 Splash Screen을 띄운다.
+
+```CSS
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 1s;
+}
+```
+
+<br>
+
+- forwards 속성을 주면 마지막 속성인 opacity:0 이 애니메이션이 끝나도 유지된다.
+- 단, opacity:0인 경우 보이지는 않지만 화면에는 그대로 차지하고 있기 때문에 navigation 클릭이 되지 않는 문제가 발생한다.
+- 이 때, **visible: hidden** 속성을 애니메이션에 추가한다.
+
+<br>
+
+### (1) animation-delay
+
+animation 시작을 delay 시킬 수 있음.
