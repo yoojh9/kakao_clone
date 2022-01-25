@@ -218,3 +218,29 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 - layer는 포토샵이나 스케치의 레이어를 생각하면 됨
 - display 작업을 하거나 position 작업을 하면 layer를 갖게 된다.
 - z-index는 absolute position이나 fixed position에 대해 설정할 수 있다.
+
+<br><br>
+
+## 14) flex한 children 순서 변경
+
+### (1) flex-direction
+
+```CSS
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+```
+
+<br>
+
+### (2) order
+
+```CSS
+.message-row--own .message__time {
+  order: 0;
+}
+
+.message-row--own .message__bubble {
+  order: 1;
+}
+```
