@@ -279,7 +279,7 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 
 <br>
 
-- forwards 속성을 주면 마지막 속성인 opacity:0 이 애니메이션이 끝나도 유지된다.
+- **forwards** 속성을 주면 마지막 속성인 opacity:0 이 애니메이션이 끝나도 유지된다.
 - 단, opacity:0인 경우 보이지는 않지만 화면에는 그대로 차지하고 있기 때문에 navigation 클릭이 되지 않는 문제가 발생한다.
 - 이 때, **visible: hidden** 속성을 애니메이션에 추가한다.
 
@@ -287,4 +287,4 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 
 ### (1) animation-delay
 
-animation 시작을 delay 시킬 수 있음.
+animation 실행을 delay 시킬 수 있음.
