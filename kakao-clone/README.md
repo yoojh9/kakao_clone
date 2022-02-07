@@ -359,3 +359,33 @@ animation 실행을 delay 시킬 수 있음.
 ```
 
 - https://github.com/yoojh9/kakao_clone/commit/16c9447bd0024c8b37b0748f10fdd7d51bcc8214
+
+<br><br>
+
+## 18. No Mobile Media Query
+
+- width가 645px 이상이면 'Your Screen is too big' 이라는 문구를 띄운다.
+
+```CSS
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+```
+
+- landscape
