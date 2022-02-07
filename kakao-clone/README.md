@@ -341,4 +341,21 @@ animation 실행을 delay 시킬 수 있음.
 }
 ```
 
-### (2) transition & animation
+<br><br>
+
+## 17. Transition
+
+### (1) :focus-within
+
+- 내부에 focus 되어 있는 element가 있을 경우 스타일 적용
+
+```CSS
+/* reply 내부에 어떤 element가 focus되어 있다면 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+```
+
+- https://github.com/yoojh9/kakao_clone/commit/16c9447bd0024c8b37b0748f10fdd7d51bcc8214
