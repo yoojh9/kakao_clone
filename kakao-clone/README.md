@@ -288,3 +288,57 @@ CSS 박스 모델의 기본값은 요소에 테두리나 안쪽 여백이 있으
 ### (1) animation-delay
 
 animation 실행을 delay 시킬 수 있음.
+
+<br><br>
+
+## 16. Animation
+
+- header 영역 설정 아이콘 hover 시 돌아가도록 애니메이션 설정
+
+```CSS
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 2s linear infinite;
+}
+```
+
+<br>
+
+### (1) will-change
+
+- 하트 아이콘 hover 시 애니메이션 추가
+- scale에 1.1을 주면 살짝 흔들리는 것처럼 보인다.
+- **will-change**는 기본적으로 브라우저에게 뭔가가 바뀔거라고 얘기해준다. 이는 애니메이션이 좀 더 괜찮아보이게 해준다.
+- will-change: transform은 transformation이 바뀔 것이라고 브라우저에게 알려준다. 그래서 브라우저가 컴퓨터의 그래픽카드를 이용해서 애니메이션을 가속화 할 수 있게 한다.
+
+```CSS
+.open-post__like-count:hover i {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.1);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+```
+
+### (2) transition & animation
